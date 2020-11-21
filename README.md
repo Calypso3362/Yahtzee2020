@@ -52,7 +52,7 @@ Combinations:
 *Second half:*  
 8. 3 of a Kind
    - When three of the dices are the same within all five dices
-   - For every number one, each will count as one point (Maximum 5 points)
+   - Gained number of points  as the summation of all five dices (Maximum 30 points)
 9. 4 of a Kind	
    - When four of the dices are the same within all five dices
    - Gained number of points  as the summation of all five dices (Maximum 30 points)
@@ -64,7 +64,7 @@ Combinations:
    - 30 score will be gained
 12. Large Straight	
    - When the number of five dices are consecutive
-   - 30 score will be gained
+   - 40 score will be gained
 13. YAHTZEE	
    - When all the number of the dices are the same
    - 50 score will be gained
@@ -72,7 +72,7 @@ Combinations:
    - Any combination of five dices
    - Gained number of points  as the summation of all five dices. (Maximum 30 points)
 15. YAHTZEE BONUS	
-   - After having YAHTZEE, if the next round is also YAHTZEE, the gained score can be marked as any turn while having a bonus	
+   - After having YAHTZEE, if the next round is also YAHTZEE, the gained score can be marked as any combination while having a bonus	
    - A bonus of 100 will be gained. (The maximum score in the second half excluding bonus will be 235)
 
 ***7 and 15 are special combinations.***
@@ -86,22 +86,23 @@ Combinations:
 
 2. Data structures for storing game status
 - Every turn’s score will be stored into each player’s storage unit
+- Players can keep the dice and their choice will be saved
 - Players can input the wanted combination and the resultant score will be saved after the comparison with the result
 
 3. Dynamic memory management
-- Allow users to save and load the game
-- Cumalating the score of players in every turn
-- Match the result of the rolling with the combination stored in the memory
+- dynamic variables like vectors may be used for unknown number of varibales
+- pointers may be used to allocate the dynamic variables
 
 4. File input/output (e.g., for loading/saving game status)
 - Players can save and load the game status in any time 
 - input different program codes from different files when choosing different modes
+- Players can input their choice with keyboard and result will be shown on screen
 
 5. Program codes in multiple files
 - Different modes will have multiple files for program codes
   - Input,output,chance_card_pool, etc
 - Set up functions in different files, such as combination matching function.
-
+- makefile with be used to compile the files
 
 
                   
