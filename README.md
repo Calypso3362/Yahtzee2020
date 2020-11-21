@@ -1,5 +1,5 @@
 # Yahtzee2020 #
-  An old game found in 1956 which only needs dices, papers and pens to play with.
+  Yahtzee is an old game found in 1956 which only needs dices, papers and pens to play with. In Yahtzee2020, a new creative mode is added for fun.
 # Identification of team members 
 Kwong Yiu Tung (3035694604): 
   - Username: Calypso3362
@@ -10,19 +10,19 @@ Chan King Lai (3035692967):
 # Game decription
 
 Basic rules:
--	Number of players: 2-10 (3-4 will be the best)
--	Players take turns to roll 5 dices with a total of 13 turns
--	For each turn, player can select any number of unwanted dice and roll again for a maximum of 3 times 
+-	Number of players: 2
+-	Players take turns to roll 5 dice with a total of 13 turns
+-	For each turn, player will roll the 5 dice, and then select any number of unwanted dice and reroll for a maximum of 2 times 
 -	According to the final result, player choose one of the 13 combinations and count the score into a list
 -	If the result cannot match with any of the combinations, 0 score will be marked
--	There will be two parts of the game, with different combination but a total number of 13(excluding some special combination)
+-	There will be two parts of the game, with different combinations but a total number of 13(excluding some special combination)
 -	The player with highest score wins
 
 New 2020 rules:
 - A new mode will be added (named Creative mode), as special rules and play styles are included while players can choose to play in normal mode or creative mode before the game start.
-    - A new dice will be added with 12 faces and only one of the face has a function of all-match.
-    - Chance card is added as players are allowed to use the function on it, such as, increase one rolling opportunity or roll others dice again, etc.
-    - Players have to achieve some requirements to be able to draw a chance card. Everyone will be disturbed one card at the beginning of the game.
+    - The basic Yahtzee rules still apply but there will be a role system added.
+    - 6 roles are available include Alchemist, Druid, Gambler, GM, Saint, and Paladin, each with a unique skill to affect the game.
+    - Players will get a random role by rolling a dice at the start of the game.
 
 Combinations: 
 *First half:*
@@ -81,28 +81,27 @@ Combinations:
 
 1. Generation of random game sets or events 
 - The result after rolling the dice will be random
-- The chance card drawn will be random
-- Different number of players inputted at first will change the duration of whole game. (Such as, Number of turns will change accordingly)
+- There is a random chance in getting a role.
 
 2. Data structures for storing game status
-- Every turn’s score will be stored into each player’s storage unit
-- Players can keep the dice and their choice will be saved
+- Every turn’s score will be stored into each player’s storage unit of an array
 - Players can input the wanted combination and the resultant score will be saved after the comparison with the result
 
 3. Dynamic memory management
-- dynamic variables like vectors may be used for unknown number of varibales
+- Dynamic variables like vectors may be used for unknown number of varibales (in the GM skill)
 - pointers may be used to allocate the dynamic variables
 
 4. File input/output (e.g., for loading/saving game status)
-- Players can save and load the game status in any time 
-- input different program codes from different files when choosing different modes
+- Input different program codes from different files when choosing different modes
 - Players can input their choice with keyboard and result will be shown on screen
 
 5. Program codes in multiple files
 - Different modes will have multiple files for program codes
-  - Input,output,chance_card_pool, etc
-- Set up functions in different files, such as combination matching function.
-- makefile with be used to compile the files
+- Set up functions in different files, such as score checking function.
+- Makefile with be used to compile the files
 
 
                   
+# Compilation and execution instructions
+- Use the 'make' command of the makefile
+- Run the program
