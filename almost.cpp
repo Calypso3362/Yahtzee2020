@@ -581,5 +581,10 @@ int main(){
             }
         } 
     }
-    
+    if (player_one_upper_total>=63){
+        player_one_score+=35;
+    }
+    if (player_two_upper_total>=63){
+        player_two_score+=35;
+    }
 }
