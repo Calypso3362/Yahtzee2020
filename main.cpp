@@ -12,7 +12,7 @@ using namespace std;
 
 int main(){
     cout<<"Welcome to the Yahtzee, players!"<<endl<<"We have prepared two gamemodes for you!!!"<<endl<<"To enjoy normal mode, please enter 'n' as gamemode afterward."<<endl<<"To enjoy creative mode, please enter 'c' as gamemode afterward."<<endl<<"Please choose the gamemode (n/c): ";
-    char mode;
+    string mode;
     int total_player_one=0;
     int total_player_two=0;
     int score;
