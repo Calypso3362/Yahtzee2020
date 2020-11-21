@@ -1,5 +1,6 @@
 # Yahtzee2020 #
   Yahtzee is an old game found in 1956 which only needs dices, papers and pens to play with. In Yahtzee2020, a new creative mode is added for fun.
+  The makefile has some bugs that cannot run normally, and we couldn't fix it due to tight deadline, please read the source code. ヽ(○ﾟ´Д｀ﾟ○)ﾉﾟ
 # Identification of team members 
 Kwong Yiu Tung (3035694604): 
   - Username: Calypso3362
