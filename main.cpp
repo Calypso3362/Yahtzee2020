@@ -15,12 +15,13 @@ int main(){
     char mode;
     int total_player_one=0;
     int total_player_two=0;
+    int score;
     
     cin>>mode;
-    if(mode==c){
+    if(mode=="c"){
         for(int i=0;i<13;i++){
             for (int j=0;j<2;j++){
-                int score=creative();
+                score=creative();
                 if(j==0){
                     total_player_one+=score;
                 } else{
@@ -28,10 +29,10 @@ int main(){
                 }
             }
         }
-    } else if(mode==n){
+    } else if(mode=="n"){
         for(int k=0;k<13;k++){
             for (int l=0;l<2;l++){
-                normal();
+                score=normal();
                 if(l==0){
                     total_player_one+=score;
                 } else{
