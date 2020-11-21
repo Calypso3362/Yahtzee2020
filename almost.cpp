@@ -258,6 +258,8 @@ int player_one_dice[5]={0,0,0,0,0};
 int player_two_dice[5]={0,0,0,0,0};
 int player_one_expected_score[13]={0,0,0,0,0,0,0,0,0,0,0,0,0};
 int player_two_expected_score[13]={0,0,0,0,0,0,0,0,0,0,0,0,0};
+int player_one_upper_total=0;
+int player_two_upper_total=0;
 int player_one_score=0;
 int player_two_score=0;
 int player_one_check_list[13]={0,0,0,0,0,0,0,0,0,0,0,0,0};
@@ -541,7 +543,10 @@ int main(){
             cout<<"You have choosen "<<main_combination[com_num]<<" with score of "<<player_one_expected_score[com_num]<<". Are you sure? (yes/no): ";
             cin>>input_four;
             if(input_four=="yes"){
-                if(player_one_check_list[com_num]!=1){   
+                if(player_one_check_list[com_num]!=1){
+                    if(com_num==0||com_num==1||com_num==2||com_num==3||com_num==4||com_num==5){
+                        player_one_upper_total+=player_one_expected_score[com_num];
+                    }
                     player_one_score=player_one_score+player_one_expected_score[com_num];
                     player_one_check_list[com_num]=1;
                     player_turn_count++;
@@ -559,7 +564,10 @@ int main(){
             cout<<"You have choosen "<<main_combination[com_num]<<" with score of "<<player_two_expected_score[com_num]<<". Are you sure? (yes/no): ";
             cin>>input_four;
             if(input_four=="yes"){
-                if(player_two_check_list[com_num]!=1){   
+                if(player_two_check_list[com_num]!=1){
+                    if(com_num==0||com_num==1||com_num==2||com_num==3||com_num==4||com_num==5){
+                        player_two_upper_total+=player_two_expected_score[com_num];
+                    }
                     player_two_score=player_two_score+player_two_expected_score[com_num];
                     player_two_check_list[com_num]=1;
                     player_turn_count=0;
